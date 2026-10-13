@@ -35,6 +35,7 @@ data = load_data()
 
 # Graficar serie
 def plot_series(data, initial_date, proy):
+    # Filtra los datos desde la fecha seleccionada y ajusta el horizonte de proyeccion.
     data_plot = data.loc[initial_date:]
     data_plot = data_plot[:-(120-proy)]
     fig = go.Figure([
